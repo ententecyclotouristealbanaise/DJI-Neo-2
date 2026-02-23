@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DJI Neo 2 Fly More Combo RC-N3 — Fiche technique</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green: #2d6a4f;
+    --green-light: #40916c;
+    --gold: #c9a84c;
+    --gold-light: #f5e29a;
+    --bg: #f4faf5;
+    --border: #c8e6c9;
+    --text: #1e2d24;
+    --text-muted: #5a7060;
+    --shadow: 0 4px 20px rgba(45,106,79,0.10);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); padding: 40px 24px 60px; }
+
+  .page { max-width: 820px; margin: 0 auto; }
+
+  /* EN-TÊTE */
+  .header {
+    background: linear-gradient(135deg, #1a1a2e 0%, #2d6a4f 70%, #40916c 100%);
+    border-radius: 20px; padding: 36px 40px; margin-bottom: 32px;
+    position: relative; overflow: hidden;
+  }
+  .header::after {
+    content: ''; position: absolute; top: -50px; right: -50px;
+    width: 260px; height: 260px; border-radius: 50%;
+    background: rgba(201,168,76,0.12); pointer-events: none;
+  }
+  .club-tag {
+    display: inline-block; background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.25); color: #c8f0d8;
+    font-size: 11px; font-weight: 600; letter-spacing: 2px;
+    text-transform: uppercase; padding: 5px 14px; border-radius: 100px; margin-bottom: 18px;
+  }
+  .header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px; font-weight: 900; color: white; line-height: 1.15; margin-bottom: 6px;
+  }
+  .header h1 span { color: var(--gold-light); }
+  .header p { font-size: 14px; color: rgba(255,255,255,0.7); font-weight: 300; margin-bottom: 24px; line-height: 1.6; }
+  .price-bubble {
+    display: inline-flex; flex-direction: column;
+    background: rgba(255,255,255,0.1); border: 1.5px solid rgba(255,255,255,0.25);
+    border-radius: 14px; padding: 14px 22px; gap: 2px;
+  }
+  .price-bubble .label { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.55); font-weight: 600; }
+  .price-bubble .amount { font-family: 'Playfair Display', serif; font-size: 34px; font-weight: 900; color: var(--gold-light); line-height: 1; }
+  .price-bubble .sub { font-size: 11.5px; color: rgba(255,255,255,0.6); margin-top: 2px; }
+
+  /* TABLE PRINCIPALE */
+  .card {
+    background: white; border-radius: 18px; border: 1.5px solid var(--border);
+    box-shadow: var(--shadow); overflow: hidden; margin-bottom: 20px;
+  }
+  .card-title {
+    background: var(--green); color: white;
+    font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 700;
+    padding: 14px 24px; display: flex; align-items: center; gap: 10px;
+  }
+  .card-title .icon { font-size: 18px; }
+
+  table { width: 100%; border-collapse: collapse; }
+  tr { border-bottom: 1px solid #e8f5e9; }
+  tr:last-child { border-bottom: none; }
+  tr:hover { background: #f9fdfa; }
+  td { padding: 13px 24px; vertical-align: top; font-size: 14px; line-height: 1.5; }
+  td:first-child {
+    width: 38%; font-weight: 600; color: var(--text-muted); font-size: 13px;
+    text-transform: uppercase; letter-spacing: 0.4px; padding-right: 12px;
+    border-right: 1px solid #e8f5e9;
+  }
+  td:last-child { color: var(--text); }
+
+  .chip {
+    display: inline-block; font-size: 12px; font-weight: 700; padding: 3px 10px;
+    border-radius: 100px; margin-right: 4px; margin-bottom: 2px;
+  }
+  .chip-green { background: #e8f5e9; color: #2e7d32; }
+  .chip-gold { background: #fff8e1; color: #b8860b; }
+  .chip-blue { background: #e3f2fd; color: #1565c0; }
+  .chip-grey { background: #f5f5f5; color: #616161; }
+  .chip-red { background: #ffebee; color: #c62828; }
+
+  strong { font-weight: 600; color: var(--text); }
+  .check { color: #2e7d32; font-weight: 700; margin-right: 4px; }
+  .warn { color: #e65100; font-weight: 700; margin-right: 4px; }
+
+  /* BUDGET */
+  .budget-table { width: 100%; border-collapse: collapse; }
+  .budget-table tr { border-bottom: 1px solid #e8f5e9; }
+  .budget-table tr:last-child { border-bottom: none; background: #fffbee; }
+  .budget-table td { padding: 12px 24px; font-size: 14px; }
+  .budget-table td:first-child { color: var(--text-muted); font-weight: 500; }
+  .budget-table td:last-child { text-align: right; font-weight: 600; color: var(--text); }
+  .budget-table tr:last-child td { font-weight: 700; font-size: 16px; color: var(--green); }
+
+  /* LIEN */
+  .links-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px; }
+  .btn-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    text-decoration: none; font-size: 13.5px; font-weight: 600;
+    padding: 11px 20px; border-radius: 10px; transition: background 0.2s;
+  }
+  .btn-green { background: var(--green); color: white; }
+  .btn-green:hover { background: var(--green-light); }
+  .btn-gold { background: var(--gold); color: #1a1a00; }
+  .btn-gold:hover { background: var(--gold-light); }
+  .btn-outline { background: white; color: var(--green); border: 1.5px solid var(--green); }
+  .btn-outline:hover { background: #f0faf3; }
+
+  /* NOTE BAS */
+  .note {
+    background: #fff8e1; border: 1.5px solid var(--gold); border-radius: 12px;
+    padding: 16px 20px; font-size: 13px; color: #7a5a00; line-height: 1.6; margin-top: 20px;
+  }
+  .note strong { color: #5a3e00; }
+
+  /* NAV */
+  .nav-bar {
+    display: flex; justify-content: flex-end; margin-bottom: 20px;
+  }
+  .btn-nav {
+    display: inline-flex; align-items: center; gap: 8px;
+    text-decoration: none; font-size: 14px; font-weight: 600;
+    padding: 12px 22px; border-radius: 12px; transition: all 0.2s;
+    background: var(--green); color: white;
+    box-shadow: 0 3px 12px rgba(45,106,79,0.25);
+  }
+  .btn-nav:hover { background: var(--green-light); transform: translateY(-2px); box-shadow: 0 5px 18px rgba(45,106,79,0.35); }
+
+  /* FOOTER */
+  .footer { text-align: center; margin-top: 32px; font-size: 12px; color: var(--text-muted); }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- NAVIGATION -->
+  <div class="nav-bar">
+    <a class="btn-nav" href="videos-DJI-Neo2.html">📹 Voir les 6 vidéos YouTube →</a>
+  </div>
+
+  <!-- EN-TÊTE -->
+  <div class="header">
+    <div class="club-tag">🚵 ECTA — Fiche produit · Février 2026</div>
+    <h1>DJI Neo 2<br><span>Fly More Combo + RC-N3</span></h1>
+    <p>Drone compact avec suivi de personne par intelligence artificielle (ActiveTrack),<br>détection d'obstacles omnidirectionnelle et 3 batteries incluses.</p>
+    <div class="price-bubble">
+      <span class="label">Prix indicatif</span>
+      <span class="amount">~399 €</span>
+      <span class="sub">Fly More Combo avec télécommande RC-N3</span>
+    </div>
+  </div>
+
+  <!-- 1. CONTENU DU PACK -->
+  <div class="card">
+    <div class="card-title"><span class="icon">📦</span> Contenu du pack Fly More Combo RC-N3</div>
+    <table>
+      <tr>
+        <td>Drone</td>
+        <td><strong>DJI Neo 2</strong> — 1 unité</td>
+      </tr>
+      <tr>
+        <td>Télécommande</td>
+        <td><strong>DJI RC-N3</strong> — Pilotage précis longue portée (O4, jusqu'à 10 km)</td>
+      </tr>
+      <tr>
+        <td>Émetteur-récepteur</td>
+        <td>Émetteur numérique DJI Neo 2 inclus (protocole O4)</td>
+      </tr>
+      <tr>
+        <td>Batteries</td>
+        <td><strong>3 batteries</strong> intelligentes incluses (~19 min chacune)</td>
+      </tr>
+      <tr>
+        <td>Hub de charge</td>
+        <td>Station de recharge <strong>bidirectionnelle</strong> — charge les 3 batteries séquentiellement (65 W, ~68 min pour 3 batteries)</td>
+      </tr>
+      <tr>
+        <td>Câbles & accessoires</td>
+        <td>Câble USB-C, vis de rechange, protections hélices intégrées au châssis</td>
+      </tr>
+      <tr>
+        <td>Stockage</td>
+        <td><strong>49 Go intégrés</strong> — pas besoin de carte microSD (~2h30 de vidéo 4K)</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- 2. CAMÉRA & IMAGE -->
+  <div class="card">
+    <div class="card-title"><span class="icon">🎬</span> Caméra & Qualité d'image</div>
+    <table>
+      <tr>
+        <td>Capteur photo</td>
+        <td><strong>1/2" CMOS — 12 mégapixels</strong></td>
+      </tr>
+      <tr>
+        <td>Vidéo principale</td>
+        <td><strong>4K / 60 fps</strong> (MP4 ou MOV, H.264 & H.265)</td>
+      </tr>
+      <tr>
+        <td>Ralentis</td>
+        <td><strong>4K / 100 fps</strong> — ralentis fluides pour passages VTT</td>
+      </tr>
+      <tr>
+        <td>Vidéo panoramique</td>
+        <td>Sphérique 2D (4K/60 fps max)</td>
+      </tr>
+      <tr>
+        <td>Stabilisation</td>
+        <td>Nacelle mécanique <strong>2 axes</strong> + stabilisation électronique EIS</td>
+      </tr>
+      <tr>
+        <td>Photo</td>
+        <td>JPEG / DNG (RAW), 12 MP</td>
+      </tr>
+      <tr>
+        <td>Formats audio</td>
+        <td>AAC, PCM</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- 3. SUIVI DE PERSONNE & MODES -->
+  <div class="card">
+    <div class="card-title"><span class="icon">🤖</span> Suivi de personne & Modes intelligents</div>
+    <table>
+      <tr>
+        <td>Type de suivi</td>
+        <td>
+          <span class="chip chip-green">🤖 ActiveTrack IA</span><br>
+          Reconnaissance visuelle du sujet par intelligence artificielle — <strong>pas du GPS</strong>
+        </td>
+      </tr>
+      <tr>
+        <td>Vitesse de suivi max</td>
+        <td><strong>12 m/s soit ~43 km/h</strong> — parfait pour le VTT</td>
+      </tr>
+      <tr>
+        <td>Mode vélo</td>
+        <td><span class="check">✓</span> Mode dédié <strong>"Cyclisme"</strong> intégré — optimisé pour suivre un vélo ou VTT</td>
+      </tr>
+      <tr>
+        <td>SelfieShot</td>
+        <td>Cadrage automatique d'un groupe ou d'un sujet + mouvement prédéfini</td>
+      </tr>
+      <tr>
+        <td>QuickShots</td>
+        <td>Dronie, Cercle, Hélice, Boomerang, Rocket, Comète — plans cinéma automatiques</td>
+      </tr>
+      <tr>
+        <td>MasterShots</td>
+        <td>Enchaînement automatique de plans variés sur un même sujet</td>
+      </tr>
+      <tr>
+        <td>Dolly Zoom</td>
+        <td>Effet de zoom hitchcockien automatisé</td>
+      </tr>
+      <tr>
+        <td>Contrôle gestuel</td>
+        <td>Pilotage de base par gestes de la main — sans télécommande</td>
+      </tr>
+      <tr>
+        <td>Commande vocale</td>
+        <td>Commandes vocales basiques pour déclenchement photo/vidéo</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- 4. VOL & SÉCURITÉ -->
+  <div class="card">
+    <div class="card-title"><span class="icon">🛡️</span> Vol, Sécurité & Détection d'obstacles</div>
+    <table>
+      <tr>
+        <td>Poids</td>
+        <td><strong>151 g</strong> — <span class="chip chip-green">Catégorie C0</span> réglementation simplifiée</td>
+      </tr>
+      <tr>
+        <td>Détection obstacles</td>
+        <td>
+          <strong>Omnidirectionnelle</strong> — avant / arrière / gauche / droite / bas<br>
+          Vision monoculaire + <strong>LiDAR frontal</strong> (portée 0,5 à 15 m) + capteurs infrarouges
+        </td>
+      </tr>
+      <tr>
+        <td>Autonomie / batterie</td>
+        <td><strong>~19 min</strong> par batterie</td>
+      </tr>
+      <tr>
+        <td>Autonomie totale</td>
+        <td><strong>~57 min</strong> avec les 3 batteries du pack</td>
+      </tr>
+      <tr>
+        <td>Résistance au vent</td>
+        <td>Niveau 5 — jusqu'à <strong>38 km/h</strong> de vent</td>
+      </tr>
+      <tr>
+        <td>Portée télécommande</td>
+        <td><strong>10 km</strong> (norme FCC) / 6 km (CE Europe) avec RC-N3 + O4</td>
+      </tr>
+      <tr>
+        <td>Décollage / atterrissage</td>
+        <td><span class="check">✓</span> Depuis la <strong>paume de la main</strong> — très intuitif pour débutant</td>
+      </tr>
+      <tr>
+        <td>Return to Home</td>
+        <td><span class="check">✓</span> Retour automatique si batterie faible ou perte de signal</td>
+      </tr>
+      <tr>
+        <td>Return to Palm</td>
+        <td><span class="check">✓</span> Revient et atterrit dans la main du pilote</td>
+      </tr>
+      <tr>
+        <td>Protections hélices</td>
+        <td><span class="check">✓</span> Protection intégrale des hélices — sécurité en forêt et zones denses</td>
+      </tr>
+      <tr>
+        <td>Température d'utilisation</td>
+        <td>-10 °C à +40 °C</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- 5. RÉGLEMENTATION -->
+  <div class="card">
+    <div class="card-title"><span class="icon">⚖️</span> Réglementation France — Catégorie C0</div>
+    <table>
+      <tr>
+        <td>Catégorie officielle</td>
+        <td><span class="chip chip-green">C0 — &lt; 250 g</span> Réglementation la plus simple</td>
+      </tr>
+      <tr>
+        <td>Enregistrement DGAC</td>
+        <td><span class="check">✓</span> Inscription simplifiée sur <strong>Alphatango.fr</strong> — quelques minutes en ligne, gratuit</td>
+      </tr>
+      <tr>
+        <td>Formation pilote</td>
+        <td>QCM en ligne recommandé — non obligatoire pour usage associatif loisir</td>
+      </tr>
+      <tr>
+        <td>Assurance</td>
+        <td>Non obligatoire sous 250 g, mais recommandée (souvent couverte par la multirisque habitation)</td>
+      </tr>
+      <tr>
+        <td>Altitude max</td>
+        <td><strong>120 mètres</strong> au-dessus du sol</td>
+      </tr>
+      <tr>
+        <td>Distance personnes</td>
+        <td>Minimum <strong>50 m</strong> des personnes non impliquées dans la prise de vue</td>
+      </tr>
+      <tr>
+        <td>Obligation pilote</td>
+        <td>Le drone doit rester <strong>en vue directe</strong> du pilote à tout moment</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- 6. BUDGET DÉTAILLÉ -->
+  <div class="card">
+    <div class="card-title"><span class="icon">💶</span> Budget détaillé</div>
+    <table class="budget-table">
+      <tr>
+        <td>DJI Neo 2 Fly More Combo + RC-N3<br><small style="color:#aaa;">(drone + télécommande + 3 batteries + hub de charge)</small></td>
+        <td>~399 €</td>
+      </tr>
+      <tr>
+        <td>Carte microSD<br><small style="color:#aaa;">Non nécessaire — 49 Go intégrés dans le drone ✓</small></td>
+        <td>0 €</td>
+      </tr>
+      <tr>
+        <td>Pochette de transport<br><small style="color:#aaa;">Optionnel — pochette souple tierce ~15 €</small></td>
+        <td>~0 à 15 €</td>
+      </tr>
+      <tr>
+        <td><strong>TOTAL ESTIMÉ</strong></td>
+        <td><strong>~399 €</strong></td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- LIENS -->
+  <div class="links-row">
+    <a class="btn-link btn-green" href="https://store.dji.com/fr/product/dji-neo-2-fly-more-combo?vid=205221" target="_blank">🛍️ DJI Store France</a>
+    <a class="btn-link btn-gold" href="https://www.fnac.com/SearchResult/ResultList.aspx?Search=DJI+Neo+2+Fly+More+Combo+RC-N3" target="_blank">🛍️ Fnac.com</a>
+    <a class="btn-link btn-outline" href="https://www.idealo.fr/prix/208397254/dji-neo-2-fly-more-combo.html" target="_blank">📊 Comparer les prix — Idealo.fr</a>
+  </div>
+
+  <div class="note">
+    <strong>⚠️ À noter :</strong> Le DJI Neo 2 ne dispose pas de fente pour carte microSD. Les vidéos sont enregistrées dans la mémoire interne de 49 Go (environ 2h30 de 4K), puis transférées vers un ordinateur ou un smartphone via Wi-Fi ou câble USB-C. Prévoir un câble USB-C de bonne qualité pour les transferts rapides.
+  </div>
+
+  <div class="footer">
+    Fiche préparée pour le Bureau de l'Entente cyclotouriste albanaise · Février 2026 · Prix indicatifs — à vérifier selon les revendeurs
+  </div>
+
+</div>
+</body>
+</html>
